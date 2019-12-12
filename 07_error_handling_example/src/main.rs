@@ -20,6 +20,8 @@ fn main() {
     println!("Sum of random bytes: {}", val);
 }
 
+// type std::io::Result<T> = Result<T, std::io::Error>
+// std::io::Result<u32> = Result<u32, std::io::Error>
 fn process_file(mut file: File) -> std::io::Result<u32> {
     use std::io::Read;
 

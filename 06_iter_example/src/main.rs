@@ -1,5 +1,9 @@
 use std::collections::HashMap;
 
+fn times_two(i: &u32) -> u32 {
+    i * 2
+}
+
 fn main() {
     let arr = [0, 1, 2, 3];
     for x in &arr {
@@ -11,6 +15,10 @@ fn main() {
     }
 
     for x in arr.iter().map(|x| *x * 42) {
+        println!("{}", x);
+    }
+
+    for x in arr.iter().map(times_two) {
         println!("{}", x);
     }
 
